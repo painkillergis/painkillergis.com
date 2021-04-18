@@ -2,11 +2,19 @@
 source ~/.zshrc
 
 while 1; do
-  deployedVersion=`curl -fs http://painkillergis.com/version.txt` 
+
+  sleep 1
+
+  deployedVersion=`curl -Lfs http://painkillergis.com.s3.amazonaws.com/version.txt`
   localVersion=`git rev-list --count HEAD`
-  
+
   if [ "`current_branch`" != "main" ]; then
-    return
+    continue
+  fi
+
+  if ! [[ "$deployedVersion" =~ "^[0-9]+$" ]]; then
+    echo deployed version is not a number: $deployedVersion
+    continue
   fi
 
   if [ "$localVersion" -gt "$deployedVersion" ]; then
@@ -17,6 +25,5 @@ while 1; do
     aws cloudfront create-invalidation --distribution-id E2ELSINNBJU4IM --invalidation-batch "Paths={Quantity=1,Items=['/index.html']},CallerReference=string"
     echo deployment successful
   fi
-  
-  sleep 1
+
 done
