@@ -18,5 +18,5 @@ body,
 #root {
   height: 100%;
   color: #fff;
-  text-shadow: 2px 2px #555;
+  text-shadow: 2px 2px 1px #555;
 }

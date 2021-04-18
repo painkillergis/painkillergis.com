@@ -3,7 +3,15 @@ import brand from './brand.svg'
 function Brand() {
   return (
     <>
-      <img style={{ float: 'left' }} src={brand} alt="brand" width="75px" />
+      <img
+        style={{
+          float: 'left',
+          width: '75px',
+          filter: 'drop-shadow(2px 2px 1px #555)',
+        }}
+        src={brand}
+        alt="brand"
+      />
       <span
         style={{
           fontSize: '36px',
