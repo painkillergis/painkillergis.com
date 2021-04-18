@@ -1,0 +1,21 @@
+#!/usr/bin/env zsh
+source ~/.zshrc
+
+while 1; do
+  deployedVersion=`curl -fs http://painkillergis.com/version.txt` 
+  localVersion=`git rev-list --count HEAD`
+  
+  if [ "`current_branch`" != "main" ]; then
+    return
+  fi
+
+  if [ "$localVersion" -gt "$deployedVersion" ]; then
+    echo deploying version $localVersion
+    yarn build
+    echo $localVersion > build/version.txt
+    aws s3 sync build/ s3://painkillergis.com/
+    echo deployment successful
+  fi
+  
+  sleep 1
+done
