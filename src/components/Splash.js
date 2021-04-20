@@ -1,4 +1,4 @@
-import splash from './splash.jpg'
+import splash from './splash.png'
 
 function Splash() {
   return (
@@ -14,7 +14,7 @@ function Splash() {
     >
       <img
         style={{
-          filter: 'grayscale(75%) contrast(50%) brightness(150%)',
+          filter: 'grayscale(75%) contrast(75%) brightness(175%)',
           position: 'absolute',
           minWidth: '50%',
           minHeight: '50%',
