@@ -2,7 +2,12 @@ function Guttered({ children }) {
   return (
     <div
       className="guttered"
-      style={{ marginLeft: '4em', marginRight: '4em', paddingTop: '25px' }}
+      style={{
+        display: 'flex',
+        marginLeft: '4em',
+        marginRight: '4em',
+        paddingTop: '25px',
+      }}
     >
       {children}
     </div>

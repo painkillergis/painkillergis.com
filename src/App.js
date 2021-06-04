@@ -15,6 +15,7 @@ function App() {
               float: 'left',
               width: '75px',
               filter: 'drop-shadow(2px 2px 1px #555)',
+              marginRight: '12.5px',
             }}
             src={brand}
             alt="brand"
@@ -24,6 +25,15 @@ function App() {
             <p>Learn topography with fun 3D puzzles</p>
           </div>
         </Paper>
+        <a
+          href="https://lattice.painkillergis.com"
+          style={{ color: 'inherit' }}
+        >
+          <Paper>
+            <Headline>lattice</Headline>
+            <p>Cell phone tower game</p>
+          </Paper>
+        </a>
       </Guttered>
     </>
   )

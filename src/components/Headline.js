@@ -3,8 +3,6 @@ export function Headline({ children }) {
     <span
       style={{
         fontSize: '36px',
-        margin: '25px',
-        marginLeft: '12.5px',
       }}
     >
       {children}{' '}
