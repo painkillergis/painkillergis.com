@@ -2,6 +2,7 @@ import brand from './components/brand.svg'
 import Guttered from './components/Guttered'
 import Splash from './components/Splash'
 import { Paper } from './components/Paper'
+import { Headline } from './components/Headline'
 
 function App() {
   return (
@@ -18,15 +19,7 @@ function App() {
             src={brand}
             alt="brand"
           />
-          <span
-            style={{
-              fontSize: '36px',
-              margin: '25px',
-              marginLeft: '12.5px',
-            }}
-          >
-            tinfoil{' '}
-          </span>
+          <Headline>tinfoil</Headline>
           <div>
             <p>Learn topography with fun 3D puzzles</p>
           </div>
