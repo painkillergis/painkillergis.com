@@ -49,6 +49,9 @@ function App() {
           <UsefulLink href="https://gis.co.wadena.mn.us/link/jsfe/index.aspx">
             Wadena County MN GIS
           </UsefulLink>
+          <UsefulLink href="https://factoriolab.github.io">
+            FactorioLab Calculator
+          </UsefulLink>
         </UsefulLinks>
       </Guttered>
     </>
