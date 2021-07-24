@@ -3,7 +3,7 @@ import Guttered from './components/Guttered'
 import Splash from './components/Splash'
 import { Paper } from './components/Paper'
 import { Headline } from './components/Headline'
-import UsefulLinks from './components/UsefulLinks'
+import { UsefulLink, UsefulLinks } from './components/UsefulLinks'
 
 function App() {
   return (
@@ -33,7 +33,23 @@ function App() {
             <p>Cell phone tower game</p>
           </Paper>
         </a>
-        <UsefulLinks />
+        <a
+          href="https://parcels.painkillergis.com"
+          style={{ color: 'inherit', textDecoration: 'none' }}
+        >
+          <Paper>
+            <Headline>parcels</Headline>
+            <p>Hubbard Parcels</p>
+          </Paper>
+        </a>
+        <UsefulLinks>
+          <UsefulLink href="https://hubbardcounty.maps.arcgis.com/apps/webappviewer/index.html?id=405588666bba4397982b98b3fd382f62">
+            Hubbard County MN GIS
+          </UsefulLink>
+          <UsefulLink href="https://gis.co.wadena.mn.us/link/jsfe/index.aspx">
+            Wadena County MN GIS
+          </UsefulLink>
+        </UsefulLinks>
       </Guttered>
     </>
   )

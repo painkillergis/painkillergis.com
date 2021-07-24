@@ -1,23 +1,18 @@
 import { Headline } from './Headline'
 import { Paper } from './Paper'
 
-export default function UsefulLinks() {
+export function UsefulLinks({ children }) {
   return (
     <Paper>
       <Headline>Useful Links</Headline>
       <div style={{ margin: '0.5em 0' }}>
-        <Link href="https://hubbardcounty.maps.arcgis.com/apps/webappviewer/index.html?id=405588666bba4397982b98b3fd382f62">
-          Hubbard County MN GIS
-        </Link>
-        <Link href="https://gis.co.wadena.mn.us/link/jsfe/index.aspx">
-          Wadena County MN GIS
-        </Link>
+        {children}
       </div>
     </Paper>
   )
 }
 
-function Link(props) {
+export function UsefulLink(props) {
   return (
     <a
       style={{
