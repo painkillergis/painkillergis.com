@@ -3,6 +3,7 @@ import Guttered from './components/Guttered'
 import Splash from './components/Splash'
 import { Paper } from './components/Paper'
 import { Headline } from './components/Headline'
+import UsefulLinks from './components/UsefulLinks'
 
 function App() {
   return (
@@ -21,19 +22,18 @@ function App() {
             alt="brand"
           />
           <Headline>tinfoil</Headline>
-          <div>
-            <p>Learn topography with fun 3D puzzles</p>
-          </div>
+          <p>Learn topography with fun 3D puzzles</p>
         </Paper>
         <a
           href="https://lattice.painkillergis.com"
-          style={{ color: 'inherit' }}
+          style={{ color: 'inherit', textDecoration: 'none' }}
         >
           <Paper>
             <Headline>lattice</Headline>
             <p>Cell phone tower game</p>
           </Paper>
         </a>
+        <UsefulLinks />
       </Guttered>
     </>
   )
